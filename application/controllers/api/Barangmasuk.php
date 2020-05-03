@@ -79,6 +79,7 @@ class Barangmasuk extends REST_Controller
             'keterangan' => $this->post('keterangan'),
             'stat' => $this->post('stat')
         ];
+        
 
         if ($this->barangmasuk->createBarangmasuk($data) > 0) {
             $this->response([
