@@ -75,6 +75,9 @@ class Barangmasuk extends REST_Controller
             'nama_barang' => $this->post('nama_barang'),
             'instansi' => $this->post('instansi'),
             'jumlah' => $this->post('jumlah'),
+            'documentno' => $this->post('documentno'),
+            'unitprice' => $this->post('unitprice'),
+            'amount' => $this->post('amount'),
             'tgl_barang_masuk' => $this->post('tgl_barang_masuk'),
             'keterangan' => $this->post('keterangan'),
             'stat' => $this->post('stat'),
@@ -99,14 +102,17 @@ class Barangmasuk extends REST_Controller
         $id = $this->put('id');
 
         $data = [
-            'kode_barang' => $this->post('kode_barang'),
-            'nama_barang' => $this->post('nama_barang'),
-            'instansi' => $this->post('instansi'),
-            'jumlah' => $this->post('jumlah'),
-            'tgl_barang_masuk' => $this->post('tgl_barang_masuk'),
-            'keterangan' => $this->post('keterangan'),
-            'stat' => $this->post('stat'),
-            'pathDownload' => $this->post('pathDownload')
+            'kode_barang' => $this->put('kode_barang'),
+            'nama_barang' => $this->put('nama_barang'),
+            'instansi' => $this->put('instansi'),
+            'jumlah' => $this->put('jumlah'),
+            'documentno' => $this->put('documentno'),
+            'unitprice' => $this->put('unitprice'),
+            'amount' => $this->put('amount'),
+            'tgl_barang_masuk' => $this->put('tgl_barang_masuk'),
+            'keterangan' => $this->put('keterangan'),
+            'stat' => $this->put('stat'),
+            'pathDownload' => $this->put('pathDownload')
         ];
 
         if ($this->barangmasuk->updateBarangmasuk($data, $id) > 0) {
