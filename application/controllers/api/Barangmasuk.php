@@ -81,7 +81,9 @@ class Barangmasuk extends REST_Controller
             'tgl_barang_masuk' => $this->post('tgl_barang_masuk'),
             'keterangan' => $this->post('keterangan'),
             'stat' => $this->post('stat'),
-            'pathDownload' => $this->post('pathDownload')
+            'pathDownload' => $this->post('pathDownload'),
+            'jenis_id' => $this->post('jenis_id'),
+            'kategori_id' => $this->post('kategori_id')
         ];
 
         if ($this->barangmasuk->createBarangmasuk($data) > 0) {
@@ -112,7 +114,9 @@ class Barangmasuk extends REST_Controller
             'tgl_barang_masuk' => $this->put('tgl_barang_masuk'),
             'keterangan' => $this->put('keterangan'),
             'stat' => $this->put('stat'),
-            'pathDownload' => $this->put('pathDownload')
+            'pathDownload' => $this->put('pathDownload'),
+            'jenis_id' => $this->post('jenis_id'),
+            'kategori_id' => $this->post('kategori_id')
         ];
 
         if ($this->barangmasuk->updateBarangmasuk($data, $id) > 0) {
